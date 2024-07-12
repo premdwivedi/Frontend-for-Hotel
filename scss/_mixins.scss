@@ -10,10 +10,13 @@
     }
 }
 
- @mixin google-fonts($fonts) {
+@mixin google-fonts($fonts) {
     $fonts: unquote($fonts);
-    @import url(https://fonts.googleapis.com/css?family=#{$fonts})
-} 
+    @import url(https://fonts.googleapis.com/css?family=#{$fonts});
+    @media only screen {
+        // Add your media query styles here
+    }
+}
 
 @mixin tiny-screens() {
     @media only screen and (max-width: 425px) {
